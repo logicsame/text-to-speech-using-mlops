@@ -1,0 +1,10 @@
+artifacts_root: artifacts
+
+
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_dir: D:\\MLOps-Project\\archive.zip
+  local_data_file : artifacts/data_ingestion/archive.zip
+  unzip_dir : artifacts/data_ingestion
