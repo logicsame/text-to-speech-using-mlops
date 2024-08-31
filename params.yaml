@@ -1,1 +1,21 @@
-key : val
+# sound transformtion params
+sr  : 22050
+n_fft : 2048
+n_stft : 1025
+frame_shift : 0.0125
+hop_length : 2560
+frame_length : 0.05
+win_length : 1024
+mel_freq : 128
+max_mel_time : 1024
+max_db : 100
+scale_db : 10
+ref : 4.0
+power : 2.0
+norm_db : 10
+ampl_multiplier : 10.0
+ampl_amin : 1e-10
+db_multiplier : 1.0
+ampl_ref : 1.0
+ampl_power : 1.0
+min_level_db : -100.0

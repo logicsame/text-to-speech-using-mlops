@@ -1,10 +1,13 @@
 artifacts_root: artifacts
 
-
-
-
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_dir: D:\\MLOps-Project\\archive.zip
   local_data_file : artifacts/data_ingestion/archive.zip
   unzip_dir : artifacts/data_ingestion
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  wave_path: artifacts/data_ingestion/wavs
+  csv_path: artifacts/data_ingestion/metadata.csv
+  c : artifacts/data_ingestion/wavs/LJ001-0001.wav
