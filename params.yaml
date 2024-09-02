@@ -19,3 +19,28 @@ db_multiplier : 1.0
 ampl_ref : 1.0
 ampl_power : 1.0
 min_level_db : -100.0
+
+
+text_num_embeddings : 86
+embedding_size : 256
+encoder_embedding_size : 512 
+
+dim_feedforward : 1024
+postnet_embedding_size : 1024
+
+encoder_kernel_size : 3
+postnet_kernel_size : 5
+dropout : 0.1
+num_heads : 4
+
+# Other
+batch_size : 32
+grad_clip : 1.0
+lr : 2.0 * 1e-4
+r_gate : 1.0
+
+step_print : 1000
+step_test : 8000
+step_save : 8000
+
+batch_first : True

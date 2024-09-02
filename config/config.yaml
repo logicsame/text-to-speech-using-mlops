@@ -11,3 +11,8 @@ data_transformation:
   wave_path: artifacts/data_ingestion/wavs
   csv_path: artifacts/data_ingestion/metadata.csv
   c : artifacts/data_ingestion/wavs/LJ001-0001.wav
+
+model_building:
+  root_dir : artifacts/model
+
+  
