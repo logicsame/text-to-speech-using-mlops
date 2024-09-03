@@ -1,7 +1,8 @@
 from src.simpletts.constants import *
 from src.simpletts.utils.common import create_directories, read_yaml
 from src.simpletts.entity.config_entity import DataIngestionConfig
-from src.simpletts.entity.config_entity import DataTransformationConfig
+from src.simpletts.entity.config_entity import (DataTransformationConfig,
+                                                ModelBuildingConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -64,5 +65,27 @@ class ConfigurationManager:
         
         
         return data_transformation_config
+    
+    def get_model_building_config(self) -> ModelBuildingConfig:
+        config = self.config.model_building
+        create_directories([config.root_dir])
+
+        model_building_config = ModelBuildingConfig(
+            root_dir= config.root_dir,
+            text_num_embeddings = self.params.text_num_embeddings,
+            embedding_size = self.params.embedding_size,
+            encoder_embedding_size = self.params.encoder_embedding_size,
+            dim_feedforward = self.params.dim_feedforward,
+            postnet_embedding_size = self.params.postnet_embedding_size,
+            encoder_kernel_size = self.params.encoder_kernel_size,
+            postnet_kernel_size = self.params.postnet_kernel_size,
+            dropout=self.params.dropout,
+            num_heads=self.params.num_heads,
+            batch_first = self.params.batch_first,
+            mel_freq = self.params.mel_freq,
+            max_mel_time = self.params.max_mel_time
+        )
+        
+        return model_building_config
     
         

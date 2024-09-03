@@ -34,3 +34,22 @@ class DataTransformationConfig:
     min_level_db : float
     frame_shift : float
     hop_length : int
+    
+    
+@dataclass(frozen=True)
+class ModelBuildingConfig:
+    root_dir : Path
+    text_num_embeddings : int
+    embedding_size : int
+    encoder_embedding_size  : int
+    dim_feedforward : int
+    postnet_embedding_size : int
+    encoder_kernel_size : int
+    postnet_kernel_size : int
+    num_heads : int
+    dropout : float
+    batch_first : bool
+    mel_freq : int
+    max_mel_time : int
+    
+    
